@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabHost 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:id="@+id/tabHost"
+     >
+     <TabWidget
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:id="@android:id/tabs"
+     />
+     <FrameLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:id="@android:id/tabcontent"
+     >
+     
+     <!-- connection manager -->
+	 <LinearLayout 
+	 android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:id="@+id/tab1"
+     android:orientation="vertical"
+     android:paddingTop="60dp"
+     >
+
+     <Button
+     android:id="@+id/scanbutton"    
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:paddingTop="15dp"
+     android:text="@string/startScan"
+     android:onClick="startScan" />
+     
+     <Button
+     android:id="@+id/closeconnectionsbutton"    
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:paddingTop="15dp"
+     android:text="@string/closeConnections"
+     android:onClick="closeConnections" />
+     
+     <TextView
+     android:id="@+id/peer_list_label"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+   	 android:text="@string/peers"/>
+   
+     <ListView
+     android:id="@+id/peer_list"
+     android:layout_width="fill_parent" 
+     android:layout_height="100dp"
+     android:drawSelectorOnTop="false"
+     android:choiceMode="multipleChoice"
+     android:background="@drawable/consolebg"
+     />
+    
+     <TextView
+     android:id="@+id/console_label"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+   	 android:text="@string/console"/>
+    
+     <TextView
+     android:id="@+id/consoleOutput1"
+     android:layout_width="fill_parent"
+     android:layout_height="180dp"
+     android:maxLines="15"
+     android:scrollbars="vertical"
+     android:background="@drawable/consolebg"/>  
+
+	 </LinearLayout>
+	
+	 <!-- routing manager -->
+	 <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:id="@+id/tab2"
+     android:orientation="vertical"
+     android:paddingTop="45dp"
+     >
+    
+     <TextView
+     android:id="@+id/message_list_label"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+   	 android:text="@string/messages"/>
+     
+     
+      <ListView
+     android:id="@+id/message_list"
+     android:layout_width="fill_parent" 
+     android:layout_height="211dp"
+     android:drawSelectorOnTop="false"
+     android:choiceMode="multipleChoice"
+     android:background="@drawable/consolebg"
+     />
+     
+     <TextView
+     android:id="@+id/console_label2"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+   	 android:text="@string/console"/>
+    
+     <TextView
+     android:id="@+id/consoleOutput2"
+     android:layout_width="fill_parent"
+     android:layout_height="180dp"
+     android:maxLines="15"
+     android:scrollbars="vertical"
+     android:background="@drawable/consolebg"/>  
+   
+     </LinearLayout>
+      
+	 <!-- file discovery manager -->
+     <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:id="@+id/tab3"
+     android:orientation="vertical"
+     android:paddingTop="60dp"
+     >
+     
+     <EditText
+     android:id="@+id/requestfile"
+     android:hint="@string/fileHint"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+     android:background="@drawable/consolebg2"
+   	 android:textColor="#000000"/>
+     
+     <Button
+     android:id="@+id/searchButton"    
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:layout_marginTop="5dp"
+     android:paddingTop="15dp"
+     android:text="@string/startSearch"
+     android:onClick="startSearch"/>
+          
+     <TextView
+     android:id="@+id/filerequest"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+   	 android:text="@string/requestConsole"/>
+     
+     <ListView
+     android:id="@+id/request_list"
+     android:layout_width="fill_parent"
+     android:layout_height="100dp"
+     android:maxLines="15"
+     android:scrollbars="vertical"
+     android:background="@drawable/consolebg"/>
+     
+     <TextView
+     android:id="@+id/searchresult"
+     android:paddingTop="15dp"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content" 
+   	 android:text="@string/console"/>
+     
+     <TextView
+     android:id="@+id/result"
+     android:layout_width="fill_parent"
+     android:layout_height="180dp"
+     android:maxLines="15"
+     android:scrollbars="vertical"
+     android:background="@drawable/consolebg"/>
+     
+     </LinearLayout>
+ 	</FrameLayout>
+   </TabHost>
